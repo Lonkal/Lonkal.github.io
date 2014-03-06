@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="js/jquery-1.11.0.min.js"></script>		
+		<script src="./js/KiltPatternGenerator.js"></script>
+				
+	</head>
+	<body>
+		<h1>Kilt Pattern Generator</h1>
+		
+		<div>
+		
+			<strong>Shapes:</strong> <label id='numShapes'>0</label>
+			
+			<button onclick="clearCanvas();">Clear</button>
+			
+			<select id="mode" onchange="modeChanged();">
+				<option value="Circle">Circle</option>
+				<option value="Square">Square</option>
+			</select>
+			
+			<input onclick="toggleFilled();" type='checkbox' /> Filled
+			
+			<button onclick="stopAnimation();">Stop</button>
+			<button onclick="startAnimation();">Start</button>
+			<button onclick="slowDownAnimation();">Slower</button>
+			<button onclick="speedUpAnimation();">Faster</button>
+			
+			<strong>FPS:</strong>
+			<label id="fps">0</label>
+			
+			<select id='thickness' onchange="thicknessChanged();">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+			
+		</div>
+		
+		<canvas id="myCanvas" width="1280" height="720" style="border:1px solid #000000;">
+		</canvas>
+		<script>
+			init();
+		</script>
+	</body>
+</html>
